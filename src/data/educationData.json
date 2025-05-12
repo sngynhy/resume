@@ -1,0 +1,33 @@
+[
+    {
+        "name": "자바(JAVA) 기반 크로스 플랫폼 개발자 양성과정 수료",
+        "period": "2021.06 - 2021.11 (코리아 IT 아카데미)",
+        "detail": [
+            "Spring 프레임워크 기반의 2-Layered 아키텍처 구조의 개발",
+            "Jsoup 라이브러리를 사용하여 웹 크롤링",
+            "JavaScript를 통해 사용자와 페이지 간에 상호작용이 일어나는 동적 페이지 구현",
+            "HTML/CSS를 이용하여 다양한 스타일과 레이아웃 설정 및 미디어 쿼리를 활용한 반응형 웹 앱 구현",
+            "DBMS를 이용하여 데이터베이스 생성 및 관리",
+            "DB 오브젝트 설계 및 구현"
+        ],
+        "skills": "Java, Spring, JSP, JavaScript, jQuery, MySQL, Oracle, HTML5, CSS3, Ajax, JPA, Mybatis"
+    },
+    {
+        "name": "빅데이터를 활용한 스마트웹 SW 개발자 양성 과정 수료",
+        "period": "2019.09 - 2020.04 (en-core)",
+        "detail": [
+            "기초프로그래밍(Python, SQL)",
+            "파이썬 라이브러리(Beautifull Soup, Selenium)를 사용한 데이터 분석환경 구축과정, Open API를 활용한 데이터 가져오기",
+            "파이썬 라이브러리(Pandas, Numpy, Matplotlib, Seaborn 등)를 이용한 데이터 전처리 및 시각화",
+            "딥러닝, 머신러닝을 활용하여 분석예측 모델을 만들어 데이터 분석하기(KNN, 로지스틱회귀, 의사결정나무, 랜덤포레스트, 앙상블, 선형회귀, 군집분석, PCA)",
+            "HTML/CSS, JavaScript, Django, Vue.js를 이용한 웹 어플리케이션 개발"
+        ],
+        "skills": "Python, Oracle, BeautifulSoup, Selenium, OpenAPI, Pandas, NumPy, Matplotlib, Django, HTML5, CSS3, JavaScript, Django, Vue.js"
+    },
+    {
+        "name": "한림대학교 수학과 졸업",
+        "period": "2008.03 - 2012.02",
+        "detail": null,
+        "skills": null
+    }
+]

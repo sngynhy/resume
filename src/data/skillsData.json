@@ -1,0 +1,9 @@
+[
+    { "name": "Language", "detail": "JAVA, JavaScript/TypeScript, Python, HTML5, CSS3" },
+    { "name": "Framework", "detail": "Spring Boot, Nodejs, Vuejs, ReactJS" },
+    { "name": "DB", "detail": "MariaDB, MySQL, Oracle, Redis, MongoDB" },
+    { "name": "OS", "detail": "Windows, Linux" },
+    { "name": "DevOps", "detail": "AWS S3, CloudFront, GitHub Actions, Jenkins" },
+    { "name": "Tools", "detail": "IntelliJ IDEA, Eclipse, VS Code, Jupyter Notebook, PuTTy, FileZilla" },
+    { "name": "Cooperation", "detail": "Git, Slack, Jira, Notion, Zeplin, Figma" }
+]

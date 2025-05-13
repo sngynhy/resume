@@ -16,7 +16,8 @@ export const Footer = memo(function Footer() {
     return (
         <Container id="footer">
             <p>
-                <a href="https://github.com/sngynhy" target="blank">@2025 Made by sngynhy</a>
+                {/* <a href="https://github.com/sngynhy" target="blank">@2025 Made by sngynhy</a> */}
+                <a href="https://github.com/sngynhy" target="blank">@2025 SEONG YOON HYE</a>
             </p>
         </Container>
     )

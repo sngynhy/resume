@@ -31,9 +31,30 @@ export const RowLeft = styled.div`
         }
         & > p {
             margin: 0.2rem 0;
-            color: #938a85;
         }
     }
+`
+export const RowRight = styled.div`
+    text-align: left;
+    & > h3 {
+        margin: 0 0 1rem 0;
+    }
+    ${[media.large, media.medium].map((breakpoint) => breakpoint`
+        & > #aboutMe {
+            font-size: 1.1rem;
+        }
+        & > p {
+            margin: 0;
+        }
+    `)}
+    ${media.small`
+        & > #aboutMe {
+            font-size: 1rem;
+        }
+        & > p {
+            margin: 1rem 0;
+        }
+    `}
 `
 export const Navigator = styled.ul`
     list-style-type: none;
@@ -49,25 +70,6 @@ export const Navigator = styled.ul`
         margin-bottom: 2rem;
     `}
 `
-export const RowRight = styled.div`
-    text-align: left;
-    & > h3 {
-        margin: 0 0 1rem 0;
-    }
-    ${[media.large, media.medium].map((breakpoint) => breakpoint`
-        // margin-top: 1rem;
-
-        & > #aboutMe {
-            font-size: 1.1rem;
-        }
-    `)}
-    ${media.small`
-        & > #aboutMe {
-            font-size: 1rem;
-        }
-    `}
-`
-
 export const Section = styled.section`
     padding: 2rem 0;
     text-align: left;

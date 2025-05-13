@@ -32,24 +32,27 @@ export const H3 = styled.h3`
     `}
 `
 export const H4 = styled.h4`
-    font-family: 'Pretendard-Light';
-    margin: 0 0 0.5rem;
     ${[media.large, media.medium].map((breakpoint) => breakpoint`
+        font-family: 'Pretendard-Light';
         font-size: 1.2rem;
+        margin: 0 0 0.5rem;
     `)}
     ${media.small`
+        font-family: 'Pretendard-Regular';
         font-size: 1.1rem;
     `}
     
 `
 export const H5 = styled.h3`
-    font-family: 'Pretendard-ExtraLight';
-    margin: 0 0 0.5rem;
     ${[media.large, media.medium].map((breakpoint) => breakpoint`
+        font-family: 'Pretendard-ExtraLight';
         font-size: 1.1rem;
+        margin: 0 0 0.5rem;
     `)}
     ${media.small`
+        font-family: 'Pretendard-Light';
         font-size: 1rem;
+        margin: 0 0 1rem;
     `}
 `
 export const ThinLine = styled.p`
@@ -57,4 +60,8 @@ export const ThinLine = styled.p`
 `
 export const BoldLine = styled.p`
     border-bottom: 4px dotted black;
+`
+export const ColorText = styled.p`
+    color: #938a85;
+    margin: 0;
 `

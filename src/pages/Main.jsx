@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GoToTopButton, Row, RowLeft, RowRight, Navigator, Section } from "../styles/MainStyle";
-import { H1, H2, H3, H4, BoldLine, ThinLine, H5 } from "../styles/CommonStyle";
+import { H2, H3, H4, H5, BoldLine, ThinLine, ColorText } from "../styles/CommonStyle";
 import { GoMoveToTop } from "react-icons/go";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { Project } from "../components/Project";
-import { summaryData } from "../data/summaryData";
+import { summaryDataForPc, summaryDataForMb } from "../data/summaryData";
 import { coreCompetenceData } from "../data/coreCompetenceData";
 import projectData from "../data/projectData.json";
 import experienceData from "../data/experienceData.json";
@@ -31,8 +31,16 @@ export const Main = () => {
           const updatedDetails = [...prev]
           updatedDetails[index] = !updatedDetails[index]
           return updatedDetails
-        });
-    };
+        })
+    }
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768)
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+      }, [])
+
     const scrollToSection = (id) => {
         const location = document.querySelector('#' + id).offsetTop
         window.scrollTo({ top: location, behavior: "smooth" })
@@ -41,8 +49,8 @@ export const Main = () => {
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
 
-    experienceData = experienceData.sort((a, b) => b.id - a.id)
-    const lastIndex = experienceData.findIndex(el => !el.developer) - 1
+    const experienceReverseData = experienceData.sort((a, b) => b.id - a.id)
+    const lastIndex = experienceReverseData.findIndex(el => !el.developer) - 1
 
     return (
         <>
@@ -60,7 +68,7 @@ export const Main = () => {
                     {/* 상단 우측 - About Me */}
                     <RowRight className="row-right">
                         {/* <H3>About Me.</H3> */}
-                        <div id="aboutMe" dangerouslySetInnerHTML={{ __html: summaryData }} />
+                        <div id="aboutMe" dangerouslySetInnerHTML={{ __html: isMobile ? summaryDataForMb : summaryDataForPc }} />
                     </RowRight>
                 </Row>
             </div>
@@ -70,7 +78,7 @@ export const Main = () => {
                 <Section id="experience">
                     <H2>{navList[0].title}</H2>
                     <BoldLine />
-                    {experienceData.map((experience, i) => {
+                    {experienceReverseData.map((experience, i) => {
                         return (
                             <div key={i}>
                                 <Row>
@@ -78,8 +86,8 @@ export const Main = () => {
                                         <RowLeft className="row-left">
                                             <div className="row-left-container">
                                                 <H3>{experience.name}.</H3>
-                                                <p>{experience.role}</p>
-                                                <p>{experience.period}</p>
+                                                <ColorText>{experience.role}</ColorText>
+                                                <ColorText>{experience.period}</ColorText>
                                             </div>
                                         </RowLeft>
                                     }
@@ -89,7 +97,13 @@ export const Main = () => {
                                 </Row>
                                 {experience.developer &&
                                     <div>
-                                        {i === lastIndex && <H3 style={{color: "#938a85", cursor: 'pointer'}} onClick={() => setShowOther(!showOther)}>Other Experience.</H3>}
+                                        {i === lastIndex &&
+                                        <div onClick={() => setShowOther(!showOther)} style={{display: 'flex', justifyContent: 'space-between', color: "#938a85", cursor: 'pointer'}}>
+                                            <div>
+                                                <H4>Other Experience.</H4>
+                                            </div>
+                                            <span>{showOther ? <FaCaretUp /> : <FaCaretDown />}</span>
+                                        </div>}
                                         <ThinLine />
                                     </div>
                                 }
@@ -98,14 +112,15 @@ export const Main = () => {
                                         <Row style={{color: '#938a85'}}>
                                                 <RowLeft className="row-left">
                                                     <div className="row-left-container" style={{margin: '0'}}>
-                                                        <H4 style={{margin: '1rem 0'}}>{experience.name}.</H4>
-                                                        <p>{experience.period}</p>
+                                                        <H4>{experience.name}.</H4>
+                                                        <ColorText>{experience.period}</ColorText>
                                                     </div>
                                                 </RowLeft>
                                                 <RowRight>
                                                     <p>{experience.role}</p>
                                                 </RowRight>
                                         </Row>
+                                        <p></p>
                                     </div>
                                 }
                             </div>
@@ -122,8 +137,8 @@ export const Main = () => {
                                 <RowLeft className="row-left">
                                     <div className="row-left-container">
                                         <H3>{data.name}.</H3>
-                                        <p>{data.role}</p>
-                                        <p>{data.period}</p>
+                                        <ColorText>{data.role}</ColorText>
+                                        <ColorText>{data.period}</ColorText>
                                     </div>
                                 </RowLeft>
                                 <RowRight className="row-right">
@@ -146,7 +161,7 @@ export const Main = () => {
                                             <H4>{data.name}</H4>
                                         </RowLeft>
                                         <RowRight>
-                                            {data.detail}
+                                            <p>{data.detail}</p>
                                         </RowRight>
                                     </Row>
                                 </div>
@@ -162,15 +177,13 @@ export const Main = () => {
                         {educationData.map((data, i) => {
                             return (
                                 <div key={i} style={{marginBottom: '1rem'}}>
-                                    <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                                        <div style={{cursor: data.detail ? 'pointer' : ''}} onClick={() => data.detail ? toggleDetail(i) : null}>
+                                    <div onClick={() => data.detail ? toggleDetail(i) : null} style={{display: 'flex', justifyContent: 'space-between', cursor: data.detail ? 'pointer' : ''}}>
+                                        <div>
                                             <H4>{data.name}</H4>
                                         </div>
-                                        {data.detail && <span style={{cursor: 'pointer'}} onClick={() => toggleDetail(i)}>
-                                                {showDetails[i] ? <FaCaretUp /> : <FaCaretDown />}
-                                            </span>}
+                                        {data.detail && <span>{showDetails[i] ? <FaCaretUp /> : <FaCaretDown />}</span>}
                                     </div>
-                                    <span>{data.period}</span>
+                                    <ColorText>{data.period}</ColorText>
                                     {showDetails[i] && <div>
                                         <ul>
                                             {data.detail?.map((el, i) => <li key={i}>{el}</li>)}

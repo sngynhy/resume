@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/resume/static/css/main.8d04c796.css",
-    "main.js": "/resume/static/js/main.118d2d98.js",
+    "main.js": "/resume/static/js/main.9cb591a5.js",
     "static/js/206.49926a30.chunk.js": "/resume/static/js/206.49926a30.chunk.js",
     "static/media/Pretendard-Thin.ttf": "/resume/static/media/Pretendard-Thin.23965237737042c7c087.ttf",
     "static/media/Pretendard-ExtraLight.ttf": "/resume/static/media/Pretendard-ExtraLight.3a1f8545bfb6498f1f14.ttf",
@@ -15,6 +15,6 @@
   },
   "entrypoints": [
     "static/css/main.8d04c796.css",
-    "static/js/main.118d2d98.js"
+    "static/js/main.9cb591a5.js"
   ]
 }

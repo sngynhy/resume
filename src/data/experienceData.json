@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "수학강사",
-        "period": "2012.04 - 2021.04",
+        "period": "2012.04 - 2018.11",
         "role": "초/중/고등부 및 입시 수학 강의",
         "description": "",
         "developer": false
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "세븐에듀",
-        "period": "2012.04 - 2021.04",
+        "period": "2020.04 - 2020.08",
         "role": "온라인 학생 관리 및 코칭",
         "description": "",
         "developer": false
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "name": "풀이러닝",
-        "period": "2012.04 - 2021.04",
+        "period": "2020.08 - 2021.04",
         "role": "입시 수학 문제 분석 및 문제 은행 서비스 콘텐츠 개발",
         "description": "",
         "developer": false

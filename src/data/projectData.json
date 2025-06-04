@@ -10,7 +10,7 @@
             { "main": "RestAPI 개발, DB 설계 및 구축", "detail": null },
             { "main": "TypeORM을 활용하여 DB와의 상호작용 처리", "detail": null },
             { "main": "JWT 인증", "detail": null },
-            { "main": "관리자 페이지 개발", "detail": ["팝업 기능", "회원 관리", "문의 게시판"] },
+            { "main": "관리자 페이지 개발", "detail": ["공지사항", "FAQ", "고객 문의", "회원", "팝업", "제품 관리"] },
             { "main": "apiDoc을 활용하여 API 명세서 작성", "detail": null },
             { "main": "PM2를 이용하여 서버 무중단 배포 환경 구축", "detail": null }
         ],
@@ -37,13 +37,12 @@
                 "detail": [
                     "시각화 관련 전체 기능 테스트 및 버그/오류 해결",
                     "하드 코딩된 데이터 변수 및 로직 리팩토링을 통해 기능 확장성 확보",
-                    "공통 UI 컴포넌트화 및 공통 함수 처리",
-                    "vuex를 이용한 상태 관리 => EventBus 코드 제거",
-                    "중복되는 불필요한 API의 호출을 줄여 성능 향상"
+                    "공통 UI 컴포넌트화 및 공통 함수 모듈화",
+                    "vuex를 이용한 상태 관리"
                 ]
             }
         ],
-        "tech": "Spring Boot(JAVA), Vuejs(Javascript), MariaDB, JPA, Plotly.js, AG-grid"
+        "tech": "Spring Boot, Vuejs, MariaDB, JPA, Plotly.js, AG-grid"
     },
     {
         "id": 5,
@@ -64,7 +63,7 @@
                 ]
             }
         ],
-        "tech": "Spring Boot(JAVA), Vuejs(Javascript), MariaDB, Redis, JPA, SSH, Kubernetes api, WebSocket"
+        "tech": "Spring Boot, Vuejs, MariaDB, Redis, JPA, SSH, Kubernetes api, WebSocket"
     },
     {
         "id": 5,
@@ -79,8 +78,9 @@
             { "main": "Lombok을 이용한 생성자 및 빌더 패턴 적용", "detail": null },
             { "main": "JWT 기반 인증 및 소셜 로그인 (카카오, 네이버) 기능", "detail": null },
             { "main": "vue-i18n를 활용한 다국어 처리 (한국어, 영어, 베트남어)", "detail": null },
+            { "main": "구글 애널리틱스 이벤트 설정", "detail": null },
             { "main": "배포 및 운영", "detail": null }
         ],
-        "tech": "Spring Boot(JAVA), Vuejs(Javascript), MariaDB, Redis, JPA, GA"
+        "tech": "Spring Boot, Vuejs, MariaDB, Redis, JPA, GA"
     }
 ]

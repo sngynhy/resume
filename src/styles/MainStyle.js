@@ -70,16 +70,3 @@ export const Navigator = styled.ul`
         margin-bottom: 2rem;
     `}
 `
-export const Section = styled.section`
-    padding: 2rem 0;
-    text-align: left;
-    & > h2 {
-        ${media.small`
-            font-size: 1.8rem;
-        `}
-    }
-    & > h4 {
-        font-family: 'Pretendard-ExtraLight';
-        margin: 0.2rem 0;
-    }
-`

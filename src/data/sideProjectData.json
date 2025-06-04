@@ -10,12 +10,12 @@
         "demosite": "https://d2qzqs43xovcek.cloudfront.net/",
         "work": [
             { "main": "Open API를 활용하여 넷플릭스 미디어 콘텐츠 제공", "detail": null },
-            { "main": "실제 넷플릭스의 UI/UX와 유사하게 구현", "detail": null },
+            { "main": "실제 넷플릭스의 UI/UX와 최대한 유사하게 구현", "detail": null },
             { "main": "Axios와 React Query를 활용하여 HTTP 요청 처리와 데이터 캐싱, 동기화 등 서버 상태 관리", "detail": null },
             { "main": "Zustand를 통해 전역 상태 관리", "detail": null },
             { "main": "styled-component를 사용하여 컴포넌트 스타일링 및 반응형 처리", "detail": null },
             { "main": "react-youtube 라이브러리를 활용해 Youtube 영상 삽입", "detail": null },
-            { "main": "AWS S3, CloudFront 서비스에 배포", "detail": null },
+            { "main": "AWS S3, CloudFront 환경에 프로젝트 배포", "detail": null },
             { "main": "GitHub Actions를 활용하여 배포 자동화 구축", "detail": null }
         ],
         "tech": "React, Javascript, React Query, Zustand, styled-component, AWS S3, AWS CloudFront, GitHub Actions"

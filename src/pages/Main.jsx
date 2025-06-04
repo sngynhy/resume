@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { GoToTopButton, Row, RowLeft, RowRight, Navigator, Section } from "../styles/MainStyle";
-import { H2, H3, H4, H5, BoldLine, ThinLine, ColorText } from "../styles/CommonStyle";
+import { GoToTopButton, Row, RowLeft, RowRight, Navigator } from "../styles/MainStyle";
+import { H3, H4, H5, ThinLine, ColorText } from "../styles/CommonStyle";
 import { GoMoveToTop } from "react-icons/go";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { Project } from "../components/Project";
@@ -12,6 +12,7 @@ import sideProjectData from "../data/sideProjectData.json";
 import certificationData from "../data/certificationData.json";
 import educationData from "../data/educationData.json";
 import skillsData from "../data/skillsData.json";
+import { Section } from "../components/Section";
 
 const navList = [
     { id: 'experience', title: 'Work Experience.' },
@@ -25,7 +26,7 @@ const navList = [
 export const Main = () => {
 
     const [showOther, setShowOther] = useState(false)
-    const [showDetails, setShowDetails] = useState([])
+    const [showDetails, setShowDetails] = useState([]) // 1, 2
     const toggleDetail = (index) => {
         setShowDetails((prev) => {
           const updatedDetails = [...prev]
@@ -75,9 +76,7 @@ export const Main = () => {
 
             <div style={{padding: "2rem"}}>
                 {/* Work Experience */}
-                <Section id="experience">
-                    <H2>{navList[0].title}</H2>
-                    <BoldLine />
+                <Section id="experience" title={navList[0].title}>
                     {experienceReverseData.map((experience, i) => {
                         return (
                             <div key={i}>
@@ -128,9 +127,7 @@ export const Main = () => {
                     })}
                 </Section>
                 {/* Side Project */}
-                <Section id="side-project">
-                    <H2>{navList[1].title}</H2>
-                    <BoldLine />
+                <Section id="side-project" title={navList[1].title}>
                     {sideProjectData.sort((a, b) => b.id - a.id).map((data, i) => {
                         return (
                             <Row key={i}>
@@ -149,9 +146,7 @@ export const Main = () => {
                     })}
                 </Section>
                 {/* Skills */}
-                <Section id="skills">
-                    <H2>{navList[2].title}</H2>
-                    <BoldLine />
+                <Section id="skills" title={navList[2].title}>
                     <div className="container">
                         {skillsData.map((data, i) => {
                             return (
@@ -170,9 +165,7 @@ export const Main = () => {
                     </div>
                 </Section>
                 {/* Education */}
-                <Section id="education">
-                    <H2>{navList[3].title}</H2>
-                    <BoldLine />
+                <Section id="education" title={navList[3].title}>
                     <div className="container">
                         {educationData.map((data, i) => {
                             return (
@@ -196,17 +189,13 @@ export const Main = () => {
                     </div>
                 </Section>
                 {/* Certificate */}
-                <Section id="certificate">
-                    <H2>{navList[4].title}</H2>
-                    <BoldLine />
+                <Section id="certificate" title={navList[4].title}>
                     <div className="container">
                         {certificationData.map((certification, i) => <H5 key={i}>{certification.name}</H5>)}
                     </div>
                 </Section>
                 {/* Core Competence */}
-                <Section id="core-competence">
-                    <H2>{navList[5].title}</H2>
-                    <BoldLine />
+                <Section id="core-competence" title={navList[5].title}>
                     <div className="container">
                         {coreCompetenceData.map((data, i) => <H5 key={i}>{i+1}. {data}</H5>)}
                     </div>
